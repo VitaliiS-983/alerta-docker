@@ -38,7 +38,7 @@ http {
 
                 location ~ /api {
                         include /etc/nginx/uwsgi_params;
-                        uwsgi_pass unix:/tmp/uwsgi.sock;
+                        uwsgi_pass 172.20.46.164:8080;
 
                         proxy_set_header Host $host:$server_port;
                         proxy_set_header X-Real-IP $remote_addr;
