@@ -2,7 +2,7 @@
 
 # Generate web console config, if not supplied
 if [ ! -f "${ALERTA_WEB_CONF_FILE}" ]; then
-  envsubst < /web/config.json > /usr/share/nginx/html/config.json
+  envsubst /web/config.json
 fi
 
 exec "$@"
